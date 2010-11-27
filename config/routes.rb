@@ -1,9 +1,13 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   get "pages/home"
 
   get "pages/contact"
 
   get "pages/about"
+
+  get "users/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -15,6 +19,7 @@ SampleApp::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
+  match '/signup',  :to => 'users#new'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
